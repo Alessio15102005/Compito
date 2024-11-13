@@ -1,0 +1,116 @@
+/* Stili per il corpo della pagina */
+body {
+    background-color: #f3f4f8; /* Colore di sfondo grigio chiaro */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    border-radius: 20px; /* Angoli arrotondati per l'intera pagina */
+    overflow: hidden; /* Nasconde eventuali parti fuori dai bordi */
+}
+
+/* Contenitore principale del quadrato */
+.quadrato {
+    width: 232px; /* Larghezza del quadrato */
+    height: 380px; /* Altezza aumentata per permettere di visualizzare più testo */
+    background-color: #fff; /* Colore di sfondo bianco */
+    border-radius: 20px; /* Angoli arrotondati */
+    margin: 50px auto; /* Centra il quadrato nella pagina */
+    display: flex;
+    flex-direction: column; /* Posiziona l'immagine sopra il testo */
+    justify-content: flex-start; /* Allinea il contenuto in alto */
+    align-items: center; /* Centra il contenuto orizzontalmente */
+    padding: 15px; /* Aumenta il padding per dare più spazio al testo */
+    position: relative;
+    overflow: hidden; /* Nasconde eventuali parti fuori dai bordi */
+}
+
+/* Immagine esistente allargata in larghezza con proporzioni mantenute */
+.immagine-citta {
+    width: 100%; /* L'immagine occupa tutta la larghezza */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: contain; /* Assicura che l'immagine non venga deformata */
+    object-position: center; /* Centra l'immagine */
+    border-radius: 15px; /* Aggiunge angoli arrotondati all'immagine */
+}
+
+/* Nuova immagine s.jpg posizionata in basso a sinistra */
+.immagine-s {
+    position: absolute;
+    bottom: 10px; /* Distanza dal basso */
+    left: 10px; /* Distanza dalla sinistra */
+    width: 50px; /* Puoi regolare la larghezza dell'immagine */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+/* Contenitore per il testo sotto l'immagine */
+.contenuto-testo {
+    display: flex;
+    flex-direction: column; /* Dispone il testo sotto l'immagine */
+    align-items: flex-start; /* Allinea il testo a sinistra */
+    margin-top: 20px; /* Sposta tutto il contenuto verso il basso */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    padding-left: 10px; /* Spazio a sinistra per il testo */
+    position: relative; /* Necessario per posizionare il testo assolutamente sotto la L */
+}
+
+/* Stili per il titolo */
+h2 {
+    font-size: 15px; /* Dimensione del font */
+    background-image: linear-gradient(to right, transparent 0%, transparent 0%, #a2b4e9 0%, #c0cef7 100%);
+    padding-bottom: 2px; /* Spazio sotto il testo */
+    margin: 0; /* Rimuove i margini di default */
+}
+
+/* Stili per il sottotitolo in grassetto, che si trova a sinistra */
+.sottotitolo {
+    font-size: 13px; /* Dimensione più piccola per il sottotitolo */
+    font-weight: bold; /* Grassetto */
+    margin-top: 15px; /* Spostato di un invio più giù */
+    width: 100%; /* Stessa larghezza del contenitore del titolo */
+    padding-left: 10px; /* Spazio a sinistra per il testo */
+    text-align: left; /* Allinea il testo a sinistra */
+    position: relative;
+    left: -10px; /* Sposta il sottotitolo ulteriormente a sinistra */
+}
+
+/* Posizionamento assoluto del paragrafo per il testo sotto la "L" di "Laveno" */
+.relazione {
+    font-size: 10px; /* Riduzione della dimensione del font */
+    line-height: 1.4; /* Spaziatura tra le righe per migliorare la leggibilità */
+    margin-top: 30px; /* Aumentato il margine per abbassare ulteriormente il testo */
+    padding-left: 10px; /* Spazio a sinistra per il paragrafo */
+    text-align: justify; /* Giustifica il testo */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    overflow: hidden; /* Nasconde il testo che esce dai confini */
+    position: absolute; /* Posizionamento assoluto */
+    top: 50px; /* Posizionato più in basso rispetto alla versione precedente */
+    left: 0; /* Allinea il testo al bordo sinistro del contenitore */
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 600px) {
+    .quadrato {
+        width: 90%; /* Rende il quadrato più largo su dispositivi mobili */
+        height: auto; /* Altezza automatica per una migliore visibilità */
+    }
+
+    .immagine-citta {
+        width: 100%; /* L'immagine si adatta alla larghezza del contenitore */
+        height: auto;
+    }
+
+    .contenuto-testo {
+        padding-left: 5px; /* Riduce il padding per spazi più stretti */
+    }
+
+    h2 {
+        font-size: 14px; /* Riduce la dimensione del titolo */
+    }
+
+    .sottotitolo {
+        font-size: 11px; /* Riduce la dimensione del sottotitolo */
+    }
+
+    .relazione {
+        font-size: 9px; /* Riduce la dimensione del testo della relazione */
+    }
+}
